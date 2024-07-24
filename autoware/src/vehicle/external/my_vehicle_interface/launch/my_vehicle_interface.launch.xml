@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="my_vehicle_interface" exec="vehicle_interface.py" name="vehicle_interface" output="screen">
+  </node>
+</launch>

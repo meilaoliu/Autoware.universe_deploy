@@ -1,0 +1,43 @@
+<launch>
+    <!-- 雷达驱动 -->
+    <include file="$(find-pkg-share rslidar_sdk)/launch/start.py" />
+    
+    <!-- 转换为Autoware需要的 -->
+    <include file="$(find-pkg-share lidar_transform)/launch/points_raw_transform.launch.xml">
+        <arg name="transform_x" value="0.0"/>
+        <arg name="transform_y" value="0.0"/>
+        <arg name="transform_z" value="1.0"/>
+        <arg name="transform_roll" value="0.0"/>
+        <arg name="transform_pitch" value="0.0"/>
+        <arg name="transform_yaw" value="0.0"/>
+        <arg name="RadiusOutlierFilter" value="1.0"/>
+    </include>
+
+    <!-- 相机驱动 -->
+    <!-- <include file="$(find-pkg-share usb_cam)/launch/JR_HF868.launch.py" /> -->
+
+    <!-- 生成假的GNSS和IMU数据，用于调试 -->
+    <!-- <include file="$(find-pkg-share gnss_imu_sim)/launch/both.launch.py" /> -->
+
+    <!-- GNSS模块驱动(可选，这里未使用) -->
+    <!-- <include file="$(find-pkg-share gnss_imu_sim)/launch/M620.launch.py" /> -->
+
+    <!-- IMU模块驱动 -->
+    <include file="$(find-pkg-share fdilink_ahrs)/launch/ahrs_driver.launch.py" />
+     <!-- IMU tf转换-->
+    <!-- <include file="$(find-pkg-share fdilink_ahrs)/launch/imu_tf.launch.py" /> -->
+    <!-- 底盘驱动 -->
+    <include file="$(find-pkg-share hunter_base)/launch/hunter_base.launch.py" />
+    <!-- CAN驱动 -->
+    <!-- <include file="$(find-pkg-share can_ros2_bridge)/can.launch.py" /> -->
+
+    <!-- 启动Autoware -->
+    <!-- <include file="$(find-pkg-share autoware_launch ) autoware_launch/launch/autoware.launch.xml"> -->
+    <!-- <include file="/home/buaa/autoware_universe/autoware/src/launcher/autoware_launch/autoware_launch/launch/autoware.launch.xml">
+        <arg name="map_path" value="/home/buaa/autoware_universe/autoware/autoware_map"/>
+        <arg name="vehicle_model" value="sample_vehicle"/>
+        <arg name="sensor_model" value="sample_sensor_kit"/>
+        <arg name="use_sim_time" value="false"/>
+        <arg name="launch_sensing_driver" value="false"/>
+    </include> -->
+</launch>

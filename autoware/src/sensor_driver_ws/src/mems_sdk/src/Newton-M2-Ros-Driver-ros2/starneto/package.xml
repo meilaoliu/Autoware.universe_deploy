@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>starneto_mems</name>
+  <version>1.0.0</version>
+  <description>Simple starneto_mems node</description>
+  <maintainer email="hcr2077@outlook.com">Huang Chenrui</maintainer>
+  <license>Apache License 2.0</license>
+
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!--Other depends-->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>starneto_ros_msgs</depend>
+  <depend>serial</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

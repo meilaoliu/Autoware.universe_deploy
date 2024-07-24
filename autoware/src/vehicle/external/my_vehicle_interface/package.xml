@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>my_vehicle_interface</name>
+  <version>0.0.0</version>
+  <description>Vehicle interface for integrating Autoware with Hunter car</description>
+  <maintainer email="user@todo.todo">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>autoware_auto_control_msgs</depend>
+  <depend>autoware_auto_vehicle_msgs</depend>
+  <depend>hunter_msgs</depend>
+  <depend>tier4_vehicle_msgs</depend>
+  <depend>launch</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

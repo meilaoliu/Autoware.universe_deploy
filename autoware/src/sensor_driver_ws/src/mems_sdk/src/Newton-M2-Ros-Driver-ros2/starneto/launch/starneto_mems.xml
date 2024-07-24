@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="starneto_mems" exec="starneto_mems" name="starneto_mems_node">
+        <param from="$(find-pkg-share starneto_mems)/config/starneto_mems.yaml" /> <!--Load parameters from config files-->
+    </node>
+    <node pkg="gnss_transform" exec="gnss_transform" name="gnss_transform_node">
+    </node>
+</launch>

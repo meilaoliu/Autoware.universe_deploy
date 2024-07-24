@@ -1,0 +1,15 @@
+<launch>
+    <node
+        pkg="lidar_transform"
+        exec="points_raw_transform"
+        name="points_raw_transform"
+        output="screen">
+        <param name="transform_x" value="0.0"/>
+        <param name="transform_y" value="0.0"/>
+        <param name="transform_z" value="1.0"/>
+        <param name="transform_roll" value="0.0"/>
+        <param name="transform_pitch" value="0.0"/>
+        <param name="transform_yaw" value="0.0"/>
+        <param name="RadiusOutlierFilter" value="1.0"/>
+    </node>
+</launch>

@@ -1,0 +1,7 @@
+starneto_mems_node:
+  ros__parameters:
+    node_rate: 49   # [Herz]
+    serial_baud: 115200
+    serial_port: "/dev/inss_usb"
+    GPFPD_output_topic: "/GPFPD"
+    GTIMU_output_topic: "/GTIMU"

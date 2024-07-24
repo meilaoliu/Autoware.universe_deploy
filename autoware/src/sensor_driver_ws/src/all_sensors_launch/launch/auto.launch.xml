@@ -1,0 +1,18 @@
+<launch>
+    <include file="/home/buaa/autoware_universe/autoware/src/launcher/autoware_launch/autoware_launch/launch/autoware.launch.xml">
+        <arg name="map_path" value="autoware_map/sample-map-planning"/>
+        <arg name="vehicle_model" value="sample_vehicle"/>
+        <arg name="sensor_model" value="sample_sensor_kit"/>
+        <arg name="use_sim_time" value="false"/>
+        <arg name="launch_sensing_driver" value="false"/>
+    </include>
+</launch>
+
+<!-- 启动Autoware的规划模拟器 -->
+<!-- <launch>
+    <include file="$(find-pkg-share autoware_launch)/launch/planning_simulator.launch.xml">
+        <arg name="map_path" value="autoware_map/sample-map-planning"/>
+        <arg name="vehicle_model" value="sample_vehicle"/>
+        <arg name="sensor_model" value="sample_sensor_kit"/>
+    </include>
+</launch> -->
