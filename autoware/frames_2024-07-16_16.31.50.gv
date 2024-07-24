@@ -1,0 +1,7 @@
+digraph G {
+"base_link" -> "tamagawa/imu_link"[label=" Broadcaster: default_authority\nAverage rate: 200.204\nBuffer length: 5.01\nMost recent transform: 1721118710.754151\nOldest transform: 1721118705.744251\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1721118710.7566772"[ shape=plaintext ] ;
+}->"base_link";
+}
